@@ -15,16 +15,6 @@ def intrusion_inc(type):
         list.append(i)
         print(list)
 
-def detect_intrusion(log):
-    patterns = [
-        r"(UNION SELECT|SELECT.*FROM.*WHERE)",
-        r"(DROP TABLE|DROP DATABASE)",
-        r"(--|;).*"
-    ]
-    for pattern in patterns:
-        if re.search(pattern, log):
-            return True
-    return False
 
 if __name__ == "__main__":
     import sys
