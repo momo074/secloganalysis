@@ -1,19 +1,21 @@
 # SecLogAnalysis
 
 ## Description
-SecLogAnalysis est un outil d'analyse de logs de sécurité conçu pour identifier les activités suspectes. Il utilise des expressions régulières et des heuristiques pour détecter les tentatives d'intrusion et les comportements anormaux dans les logs.
+SecLogAnalysis is a security log analysis tool designed to identify suspicious activity. It uses regular expressions and heuristics to detect intrusion attempts and anomalous behavior in logs.
 
 ## Installation
-Clonez le dépôt et installez les dépendances :
+Clone the repository and install the dependencies:
 
 git clone https://github.com/mauricechicoine/secloganalysis.git cd secloganalysis pip install -r requirements.txt
 
 
-## Utilisation
-Exécutez le script principal pour analyser les logs :
+## Usage
+Run the main script to analyze the logs:
 
-python seclog_analyzer.py /chemin/vers/les/logs
+python seclog_analyzer.py /path/to/the/logs
 
 
 ## Contribution
-Les contributions sont les bienvenues ! Veuillez ouvrir une issue ou une pull request pour proposer des améliorations ou des corrections.
+Contributions are welcome! Please open an issue or a pull request to suggest improvements or corrections.
+
+Translated with DeepL.com (free version)
