@@ -23,9 +23,7 @@ def intrusion_inc(type):
             "id": i,
             "type": type,
             "severity": random.choice(["low", "medium", "high"]),
-            "timestamp": datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
             "source_ip": f"192.168.1.{random.randint(1, 255)}",
-            "destination_ip": f"10.0.0.{random.randint(1, 255)}",
             "description": f"Suspicious {type} activity detected"
         }
         intrusion_list.append(intrusion)
