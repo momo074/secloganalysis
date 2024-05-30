@@ -13,12 +13,6 @@ def ip_analyzer(ip_address):
     except socket.herror:
         print(f"Unable to find the host corresponding to the IP address {ip_address}")
 
-# Main function to process logs
-def main(log_path):
-    with open(log_path, 'r') as file:
-        logs = file.readlines()
-
-    # Processing logs will be added here
 
 # Function to generate intrusion incidents
 def intrusion_inc(type):
@@ -28,7 +22,6 @@ def intrusion_inc(type):
             "id": i,
             "type": type,
             "severity": random.choice(["low", "medium", "high"]),
-            "source_ip": f"192.168.1.{random.randint(1, 255)}",
             "destination_ip": f"10.0.0.{random.randint(1, 255)}",  # Added destination IP
             "timestamp": datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"),  # Added timestamp
             "description": f"Cyberlympics{go0D_0Ld_m4Ur!Ce!}/Suspicious {type} activity detected"
