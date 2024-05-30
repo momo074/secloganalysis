@@ -14,14 +14,24 @@ def main(log_path):
     with open(log_path, 'r') as file:
         logs = file.readlines()
     
-    for log in logs:
-        if detect_intrusion(log):
-            print(f"Suspicious activity detected: {log}")
 
 def intrusion_inc(type):
-    list = []
-    for i in range (0,100):
-        list.append(i) 
+    intrusion_list = []
+    # Simulating intrusion incidents
+    for i in range(1, 101):
+        intrusion = {
+            "id": i,
+            "type": type,
+            "severity": random.choice(["low", "medium", "high"]),
+            "timestamp": datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+            "source_ip": f"192.168.1.{random.randint(1, 255)}",
+            "destination_ip": f"10.0.0.{random.randint(1, 255)}",
+            "description": f"Suspicious {type} activity detected"
+        }
+        intrusion_list.append(intrusion)
+    
+    return intrusion_list
+
 
 
 if __name__ == "__main__":
