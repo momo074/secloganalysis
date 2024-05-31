@@ -7,5 +7,13 @@ def ip_analyzer(ip_address):
     except socket.herror:
         print(f"Impossible de trouver l'hôte correspondant à l'adresse IP {ip_address}")
 
-# Test de la fonction
+def test_ip():
+    try:
+        # Get host name corresponding to the IP address
+        host_name = socket.gethostbyaddr(ip_address)
+        print(f"The IP address {ip_address} corresponds to the host {host_name[0]}")
+    except socket.herror:
+        print(f"Unable to find the host corresponding to the IP address {ip_address}")
+
+
 ip_analyzer("8.8.8.8")
